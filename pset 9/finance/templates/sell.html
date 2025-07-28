@@ -1,0 +1,11 @@
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+    <form action="/sell" method="post">
+        <input type="text" name="symbol" placeholder="Symbol" autofocus required>
+        <input type="number" name="shares" placeholder="Enter shares" min="1" required>
+        <button type="submit">Sell Share</button>
+    </form>
+{% endblock %}

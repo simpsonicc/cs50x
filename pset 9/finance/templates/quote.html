@@ -1,0 +1,10 @@
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <form action="/quote" method="post">
+        <input type="text" name="symbol" placeholder="symbol for stock" required>
+        <button type="submit">Enter</button>
+    </form>
+{% endblock %}
