@@ -1,0 +1,4 @@
+1. to characterize audio aura i will select energy and valence from the songs table. the higher the valence and energy, the more aura the song has!
+
+2. well for listeners the songs they prefer depends upon the genre of the music they like to listen to. For e.g. a ballerina would prefer songs with high energy
+and danceability, while someone whos prefers calm over chaos may choose more soothing audio song that would with maybe even low valence.
