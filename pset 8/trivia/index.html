@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+                   <!--const answer2 = document.querySelectorAll("#answer2") will give u a list of answer (all four and not one)-->
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Free response</h2>
+                <hr>
+                 <!-- TODO: Add multiple choice question here -->
+                <h3>What part of the brain is responsible for decision making and impulse control?</h3>
+                    <input id= "answer1" type = text placeholder = "Answer" >
+                    <button id="checkans1" type="button">Check answer</button>
+                    <p id="display1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Multiple Choice</h2>
+                <hr>
+                 <!-- TODO: Add free response question here -->
+                <h3>What is the fourth state of matter?</h3>
+                <label><input type="radio" name="state" value="Vapor">Vapor</label>
+                <label><input type="radio" name="state" value="Gel">Gel</label>
+                <label><input type="radio" name="state" value="Plasma">Plasma</label>
+                <label><input type="radio" name="state" value="Ether">Ether</label>
+                <button id="checkans2" type="button">Check answer</button>
+                <p id="display2"></p>
+
+            </div>
+        </div>
+           <script>
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const trivia_answer1 = "prefrontal cortex";
+                document.querySelector("#checkans1").addEventListener("click", function(event) {
+                    const answer1 = document.querySelector("#answer1").value.trim().toLowerCase();
+
+                    const display1 = document.querySelector('#display1');
+
+                    if (!answer1) {
+                        display1.textContent = "Please Select an Answer!";
+                        display1.style.color = "red";
+                        return;
+                    }
+
+                    if (answer1.toLowerCase() === trivia_answer1) {
+                        display1.textContent = "Correct!";
+                        display1.style.color = "green";
+                    } else {
+                        display1.textContent = "Incorrect! The correct answer is Prefrontal cortex.";
+                        display1.style.color = "red";
+                        return;
+                    }
+                 });
+
+                 const trivia_answer2 = "Plasma";
+                 document.querySelector("#checkans2").addEventListener("click", function(event) {
+                 const answer2 = document.querySelector('input[name="state"]:checked');
+                 const display2 = document.querySelector("#display2");
+
+                 if (!answer2) {
+                    display2.textContent = "Please Select an Answer!";
+                    display2.style.color = "red";
+                    return;
+                 }
+                 if (answer2.value === trivia_answer2) {
+                    display2.textContent = "Correct!";
+                    display2.style.color = "green";
+                } else {
+                    display2.textContent = "Incorrect Answer! The Correct Answer is Plasma.";
+                    display2.style.color = "red";
+                }
+            });
+        });
+             // TODO: Add code to check answers to questions
+          </script>
+    </body>
+</html>
+
+
+
+
+
