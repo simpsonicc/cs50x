@@ -16,3 +16,4 @@ C
 4. Practiced error handling
 5. Translated real-world voting rules into algorithms
 6. Developed problem decomposition skills for complex algorithmic logic
+7. Learned recursion and it's implementation 
